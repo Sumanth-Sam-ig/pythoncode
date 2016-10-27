@@ -1,0 +1,42 @@
+file handleing is shit:
+    with open('string.csv') as S:
+        reader=csv.reader(S)
+        for i in reader:
+            print(i)
+    with open('string.csv','a',newline='') as S:
+        writer=csv.writer(S)
+        record=input().strip().split(',')
+        Tuple=()
+        for i in range(len(record)):
+            Tuple+=(record[i],)
+        writer.writerow(Tuple)
+    with open('string.csv') as S:
+        reader=csv.reader(S)
+        record2=input().strip().split(',')
+        for i in reader:
+            if i[0]==record2[0]:
+                break
+        else:
+            Tuple=()
+            for i in range(len(record2)):
+                Tuple+=(record2[i],)
+            with open('string.csv','a',newline='') as S:
+                writer=csv.writer(S)
+                writer.writerow(Tuple)
+    with open('string.csv') as S:
+        reader1=csv.reader(S)
+        for i in reader1:
+            print(i)
+    with open('string.csv') as S:
+        count=0
+        reader=csv.reader(S)
+        for i in reader:
+            if i[3]=='Male' and 'kerala' in i[4].lower() and i[6].lower()=='football':
+                count+=1
+        print(count)
+    with open('string.csv') as S:
+        reader=csv.reader(S)
+        for i in reader:
+            if i[3]=='Female' and 'tamil' in i[4].lower() and i[7]=='A+':
+                print(i[0],i[5])
+FFCS()suamnthsumanth
